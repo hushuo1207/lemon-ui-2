@@ -51,7 +51,7 @@ export default {
   > .content {
     order: 2;
   }
-  > .icon {
+  > .g-icon {
     order: 1;
     margin-right: 0.3em;
   }
@@ -59,7 +59,7 @@ export default {
     > .content {
       order: 1;
     }
-    > .icon {
+    > .g-icon {
       order: 2;
       margin-left: 0.3em;
     }
