@@ -1,8 +1,6 @@
 <template>
   <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <svg v-if="icon" class="icon" aria-hidden="true">
-      <use :xlink:href="`#icon-${icon}`"></use>
-    </svg>
+    <g-icon v-if="icon" :name = "icon"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -10,25 +8,26 @@
 </template>
 
 <script>
+// import Icon from "./Icon.vue";
 export default {
-  name: "Button",
-  props: {
-    icon: {},
-    iconPosition: {
-      type: String,
-      default: "left",
-      validator(value) {
-        //判断输入的方向不是左右后的处理方法
-
-        console.log(value);
-        return !(value !== "left" && value !== "right") 
-      },
+    name: "Button",
+    props: {
+        icon: {},
+        iconPosition: {
+            type: String,
+            default: "left",
+            validator(value) {
+                //判断输入的方向不是左右后的处理方法
+                console.log(value);
+                return !(value !== "left" && value !== "right");
+            },
+        },
     },
-  },
+    // components: { Icon }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .g-button {
   font-size: var(--font-size);
   height: var(--button-height);
