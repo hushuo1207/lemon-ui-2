@@ -1,8 +1,8 @@
 <template>
   <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <g-icon v-if="icon" :name = "icon"></g-icon>
+    <g-icon v-if="icon" :name="icon" />
     <div class="content">
-      <slot></slot>
+      <slot />
     </div>
   </button>
 </template>
@@ -10,20 +10,20 @@
 <script>
 // import Icon from "./Icon.vue";
 export default {
-    name: "Button",
-    props: {
-        icon: {},
-        iconPosition: {
-            type: String,
-            default: "left",
-            validator(value) {
-                //判断输入的方向不是左右后的处理方法
-                console.log(value);
-                return !(value !== "left" && value !== "right");
-            },
-        },
+  name: "Button",
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        //判断输入的方向不是左右后的处理方法
+        console.log(value);
+        return !(value !== "left" && value !== "right");
+      },
     },
-    // components: { Icon }
+  },
+  // components: { Icon }
 };
 </script>
 
@@ -38,7 +38,7 @@ export default {
   display: inline-flex;
   justify-self: center;
   align-items: center;
-    vertical-align: middle;//上下不对齐可以添加此属性
+  vertical-align: middle; //上下不对齐可以添加此属性
   &:hover {
     border-color: var(--border-color-hover);
   }
