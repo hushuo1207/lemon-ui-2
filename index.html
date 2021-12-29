@@ -1,62 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lemon-UI</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
 
-        }
-        body{
-            font-size: var(--font-size);
-        }
-        :root{
-            /* --button-height:var(--button-height); */
-            --font-size: 14px;
-            --button-height:32px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color:#333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
-    </style>
     <style>
-        .g-button{
-            font-size: var(--font-size);
-            height: var(--button-height);
-            padding: 0 1em;
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            background: var(--button-bg);
-        }
-        .g-button:hover{
-            border-color: var(--border-color-hover);
-        }
-        .g-button:active{
-            background: var(--button-active-bg);
-        }
-        .g-button:focus{
-            outline: none;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: var(--font-size);
+      }
+      :root {
+        /* --button-height:var(--button-height); */
+        --font-size: 14px;
+        --button-height: 32px;
+        --button-bg: white;
+        --button-active-bg: #eee;
+        --border-radius: 4px;
+        --color: #333;
+        --border-color: #999;
+        --border-color-hover: #666;
+      }
     </style>
-</head>
-<body>
+    <style type="text/css">
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
     <div class="" id="app">
-        <g-button></g-button>
+      <g-button> 按钮 </g-button>
+      <g-button icon="settings"> 按钮 </g-button>
+      <g-button icon="settings" icon-position="right"> 按钮 </g-button>
+      <!-- <g-button icon="settings" icon-position="up"> 按钮 </g-button>会报错 -->
     </div>
-<script src="./node_modules//vue//dist/vue.min.js"></script>
-<script src="./button.js"></script>
-<script>
-    new Vue({
-        el: '#app',
-    })
-</script>
-</body>
+    <script src="./src/app.js"></script>
+    <script src="./assets/icon.js"></script>
+  </body>
 </html>
