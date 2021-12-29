@@ -23,7 +23,7 @@ export default {
       default: "left",
       validator(value) {
         //判断输入的方向不是左右后的处理方法
-        console.log(value);
+        // console.log(value);
         return !(value !== "left" && value !== "right");
       },
     },
