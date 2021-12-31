@@ -9,9 +9,9 @@
 </template>
 
 <script>
-// import Icon from "./Icon.vue";
+import Icon from "./Icon.vue";
 export default {
-  name: "Button",
+  name: "gbutton",
   props: {
     icon: {},
     loading: {
@@ -28,7 +28,7 @@ export default {
       },
     },
   },
-  // components: { Icon }
+  components: { 'g-icon': Icon }
 };
 </script>
 
