@@ -17,7 +17,7 @@ export default {
     loading: {
       type: Boolean,
       default: false,
-    },
+    }, 
     iconPosition: {
       type: String,
       default: "left",
@@ -25,7 +25,7 @@ export default {
         //判断输入的方向不是左右后的处理方法
         // console.log(value);
         return !(value !== "left" && value !== "right");
-      },
+      }, 
     },
   },
   components: { 'g-icon': Icon }
