@@ -10,7 +10,7 @@ describe('Input', () => {
     it('存在.', () => {
         expect(Input).to.be.ok
     })
-    it('接收'， () => {
+    it('接收', () => {
         const Constructor = Vue.extend(Input)
         const vm = new Constructor({
         propsData: {
@@ -18,7 +18,7 @@ describe('Input', () => {
         }
         }).$mount()
         const inputElement = vm.$el.querySelector('input')
-        expect(inputElement.to.equal('1234')
+        expect(inputElement.to.equal('1234'))
         vm.$destroy()
     })
 })
