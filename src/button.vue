@@ -11,7 +11,7 @@
 <script>
 import Icon from "./Icon.vue";
 export default {
-  name: "gbutton",
+  name: "LemonButton",
   props: {
     icon: {},
     loading: {
