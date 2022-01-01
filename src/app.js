@@ -36,20 +36,27 @@ new Vue({
       message: 'hai',
   },
   created(){
-    // this.$toast('文字', {
-    //   enableHtml: false
-    // })
+    
 
   },
   methods: {
     showToast(){
+      this.$toast('智商欠费', {
+        position: 'left',
+        enableHtml: false,  //支持html属性内嵌入标签
+        closeButton: {
+          text: '开挂吧',
+          callback (){
+            console.log('已提高')
+          }
+        },
+        autoClose: true,
+        autoCloseDelay: 30
+     })
+    }
+
+  }
+});
       // this.$toast('<a href="http://qq.com">hehe</a>', {
       // enableHtml: true  //支持html属性内嵌入标签
       //   })
-      
-      this.$toast('hahahahahhha哈哈哈哈哈哈哈哈哈哈哈哈哈好好好好 好好好好好好好好好好好玩', {
-        enableHtml: true  //支持html属性内嵌入标签
-      })
-    }
-  }
-});

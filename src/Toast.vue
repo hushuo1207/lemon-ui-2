@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" ref="wrapper">
+  <div class="toast" ref="wrapper" :class="toastClasses">
     <div class="message">
       <slot v-if="!enableHtml"></slot>
       <div v-else v-html="$slots.default[0]"></div>
@@ -34,9 +34,23 @@
       enableHtml: {
         type: Boolean,
         default: false
+      },
+      position: {
+          
+        type: String,
+        default: 'top',
+        validator (value) {
+            return ['top', 'bottom', 'left', 'right','center'].indexOf(value) >= 0
+        }
       }
     },
     created () {
+    },
+    computed:{
+        toastClasses(){
+             return { [`position-${this.position}`]: true}
+        }
+        
     },
     mounted () {
       this.updateStyles()
@@ -81,9 +95,13 @@
   $toast-bg: rgba(0, 0, 0, 0.75);
   .toast {
     font-size: $font-size; min-height: $toast-min-height; line-height: 1.8;
-    position: fixed; top: 0; left: 50%; transform: translateX(-50%); display: flex;
+    position: fixed; 
+    // top: 0; left: 50%; 
+    // transform: translateX(-50%); 
+    display: flex;
     color: white; align-items: center; background: $toast-bg; border-radius: 4px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50); padding: 0 16px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50); 
+    padding: 0 16px;
     .message {
       padding: 8px 0;
     }
@@ -95,6 +113,31 @@
       height: 100%;
       border-left: 1px solid #666;
       margin-left: 16px;
+    }
+    &.position-top{
+      top: 0; left: 50%; 
+      transform: translateX(-50%); 
+    }
+    &.position-bottom{
+      bottom: 0; left: 50%; 
+      transform: translateX(-50%); 
+
+    }
+    &.position-center{
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+    }
+    &.position-left{
+      top: 50%;
+      left: 0; 
+      transform: translateY(-50%); 
+    }
+    &.position-right{
+      right: 0; 
+      top: 50%;
+      
+      transform: translateY(-50%); 
     }
   }
 </style>
