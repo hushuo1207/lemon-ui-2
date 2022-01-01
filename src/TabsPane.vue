@@ -17,16 +17,16 @@ export default {
       name: {
         type: [String, Number],
         required: true
-      }
+      } 
     },
     computed: {
       classes () {
-        return {
+        return { 
           active: this.active
         }
       }
     },
-    created () {
+    mounted () {
       this.eventBus.$on('update:selected', (name) => {
         this.active = name === this.name;
       })
@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
   .tabs-pane {
     &.active {
-      background: red;
+    //   background: red;
     }
   }
 </style>

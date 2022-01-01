@@ -10,7 +10,7 @@
         name: "LemonTabsBody",
         inject: ['eventBus'],
         created(){
-    }
+        }
     }
 </script>
 
