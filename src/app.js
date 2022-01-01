@@ -10,6 +10,7 @@ import Sider from "./Sider.vue";
 import Content from "./Content.vue";
 import Layout from "./Layout.vue";
 import Footer from "./Footer.vue"
+import Toast from "./Toast.vue"
 
 Vue.component("g-button", Button);
 Vue.component("g-button-group", ButtonGroup);
@@ -22,6 +23,7 @@ Vue.component("g-footer", Footer);
 Vue.component("g-sider", Sider);
 Vue.component("g-content", Content);
 Vue.component("g-layout", Layout);
+Vue.component("g-toast", Toast);
 
 new Vue({
   el: "#app",
