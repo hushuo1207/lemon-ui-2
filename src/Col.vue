@@ -38,7 +38,7 @@
 
 <style lang="scss" scoped>
 .col {
-    width: 50%;
+    // width: 50%;
     // height: 100px;
     // background: grey;
     // border: 1px solid red;
