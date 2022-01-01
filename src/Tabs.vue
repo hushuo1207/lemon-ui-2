@@ -6,16 +6,41 @@
 </template>
 
 <script>
-    export default {
-        naem: "LemonTabs",
-        props: {
-            selected: {
-                type: Boolean,
-                default: true
-            },
-
+import Vue from 'vue'
+export default {
+    name: "LemonTabs",
+    props: {
+      selected: {
+        type: String,
+        required: true
+      },
+      direction: {
+        type: String,
+        default: 'horizontal',
+        validator (value) {
+          return ['horizontal', 'vertical'].indexOf(value) >= 0
         }
+      }
+    },
+    data () {
+      return {
+        eventBus: new Vue()
+      }
+    },
+    provide () {
+      return {
+        eventBus: this.eventBus
+      }
+    },
+    mounted () {
+        // this.eventBus.$emit('update:selected',()=>{
+        // this.$emit('update:selected',tabName)
+        // })
+    this.eventBus.$emit('update:selected', this.selected)
+      // // this.$emit('update:selected', 'xxx')
     }
+  
+}
 </script>
 
 <style lang="scss" scoped>

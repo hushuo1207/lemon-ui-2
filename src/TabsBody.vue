@@ -7,7 +7,10 @@
 
 <script>
     export default {
-        naem: "LemonTabsBody"
+        name: "LemonTabsBody",
+        inject: ['eventBus'],
+        created(){
+    }
     }
 </script>
 
