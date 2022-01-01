@@ -47,10 +47,10 @@
                 return [
                     span && `col-${span}`, 
                     offset && `offset-${offset}`,
-                    ... (ipad && [`col-ipad-${ipad.span}`]),
-                    ... (narrowPc && [`col-narrow-pc-${narrowPc.span}`]),
-                    ... (pc && [`col-pc-${pc.span}`]),
-                    ... (widePc && [`col-wide-pc-${widePc.span}`]),
+                    ... (ipad ? [`col-ipad-${ipad.span}`] : []),
+                    ... (narrowPc ? [`col-narrow-pc-${narrowPc.span}`] : []),
+                    ... (pc ? [`col-pc-${pc.span}`] : []),
+                    ... (widePc ? [`col-wide-pc-${widePc.span}`] : []),
                     ]
             }
         }
