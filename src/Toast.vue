@@ -10,8 +10,35 @@
 //     console.log('Toast111');
 // }
     export default {
-        name: "LemonToast"
+        name: "LemonToast",
+        props:{
+            autoClose:{
+                type: Boolean,
+                default: true
+            },
+            autoCloseDelay:{
+                type: Number,
+                default: 5
+            }
+        },
+        mounted(){
+            console.log('a');
+            if(this.autoClose){
+                console.log('c');
+                setTimeout(() => {
+                    this.close()
+                }, this.autoCloseDelay * 1000)
+            }
+        },
+        methods: {
+            close(){
+                console.log('bb');
+                this.$el.remove();
+                this.$destroy()
+            }
+        }
     }
+    
 </script>
 
 <style lang="scss" scoped>
