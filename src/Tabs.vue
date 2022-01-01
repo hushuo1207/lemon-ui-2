@@ -33,12 +33,23 @@ export default {
       }
     },
     mounted () {
+      this.$children.forEach((vm) => {
+        if (vm.$options.name === 'LemonTabsHead') {
+          vm.$children.forEach((childVm) => {
+            if (childVm.$options.name === 'LemonTabsItem'
+              && childVm.name === this.selected) {
+              this.eventBus.$emit('update:selected', this.selected, childVm)
+            }
+          })
+        }
+      })
         // this.eventBus.$emit('update:selected',()=>{
         // this.$emit('update:selected',tabName)
         // })
-    this.eventBus.$emit('update:selected', this.selected)
-      // // this.$emit('update:selected', 'xxx')
+        //this.eventBus.$emit('update:selected', this.selected)
+        // // this.$emit('update:selected', 'xxx')
     }
+
   
 }
 </script>
