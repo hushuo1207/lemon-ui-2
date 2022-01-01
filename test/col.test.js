@@ -48,7 +48,6 @@ describe('Col', () => {
       }
     }).$mount(div)
     const element = vm.$el
-    console.log(vm.$el.classList)
     expect(vm.$el.classList.contains('col-pc-1')).to.eq(true)
     expect(vm.$el.classList.contains('offset-pc-2')).to.eq(true)
     div.remove()

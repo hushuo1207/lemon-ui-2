@@ -12,6 +12,11 @@ import Layout from "./Layout.vue";
 import Footer from "./Footer.vue"
 import Toast from "./Toast.vue"
 import plugin from './plugin'
+import Tabs from "./Tabs.vue"
+import TabsItem from "./TabsItem.vue"
+import TabsHead from "./TabsHead.vue"
+import TabsBody from "./TabsBody.vue"
+import TabsPane from "./TabsPane.vue"
 
 Vue.component("g-button", Button);
 Vue.component("g-button-group", ButtonGroup);
@@ -26,6 +31,11 @@ Vue.component("g-content", Content);
 Vue.component("g-layout", Layout);
 Vue.component("g-toast", Toast);
 Vue.use(plugin)
+Vue.component("g-tabs", Tabs);
+Vue.component("g-tabs-item", TabsItem);
+Vue.component("g-tabs-head", TabsHead);
+Vue.component("g-tabs-body", TabsBody);
+Vue.component("g-tabs-pane", TabsPane);
 
 new Vue({
   el: "#app",
@@ -40,6 +50,19 @@ new Vue({
 
   },
   methods: {
+    showToas(){
+      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+        // position: 'center',
+        enableHtml: false,  //支持html属性内嵌入标签
+        closeButton: {
+          text: '开挂吧',
+          callback (){
+            console.log('已提高')
+          }
+        },
+        autoClose: 3
+     })
+    },
     showToast(){
       this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
         position: 'center',
@@ -50,8 +73,7 @@ new Vue({
             console.log('已提高')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 1
+        autoClose: 3
      })
     },
     showToast1(){
@@ -64,8 +86,7 @@ new Vue({
             console.log('已提高')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 1
+        autoClose: 3
      })
     },
     showToast2(){
@@ -78,8 +99,7 @@ new Vue({
             console.log('已提高')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 1
+        autoClose: 3
      })
     },
     showToast3(){
@@ -92,8 +112,7 @@ new Vue({
             console.log('已提高')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 1
+        autoClose: 3
      })
     },
     showToast4(){
@@ -106,8 +125,7 @@ new Vue({
             console.log('已提高')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 1
+        autoClose: 3
      })
     },
 
