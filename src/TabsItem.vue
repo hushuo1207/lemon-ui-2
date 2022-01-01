@@ -19,8 +19,9 @@ export default {
         default: false
       },
       name: {
-        type: ['String', 'Number'],
+        type: [String, Number],
         required: true
+        //default: ''
       }
     },
     computed: {
@@ -47,8 +48,15 @@ export default {
  .tabs-item {
     flex-shrink: 0;
     padding: 0 1em;
+    cursor: pointer;
+    border: 1px solid green;
+    height: 100%;
+    display: flex;
+    align-items: center;
     &.active {
-      background: red;
+       background: red;
+    //border-bottom: 1px solid red;
+
     }
   }
 </style>
