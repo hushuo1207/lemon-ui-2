@@ -44,92 +44,93 @@ new Vue({
       loading2: false,
       loading3: false,
       message: 'hai',
+      selectedTab: 'sports'
   },
   created(){
     
 
   },
   methods: {
-    showToas(){
-      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
-        // position: 'center',
-        enableHtml: false,  //支持html属性内嵌入标签
-        closeButton: {
-          text: '开挂吧',
-          callback (){
-            console.log('已提高')
-          }
-        },
-        autoClose: 3
-     })
-    },
-    showToast(){
-      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
-        position: 'center',
-        enableHtml: false,  //支持html属性内嵌入标签
-        closeButton: {
-          text: '开挂吧',
-          callback (){
-            console.log('已提高')
-          }
-        },
-        autoClose: 3
-     })
-    },
-    showToast1(){
-      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
-        position: 'top',
-        enableHtml: false,  //支持html属性内嵌入标签
-        closeButton: {
-          text: '开挂吧',
-          callback (){
-            console.log('已提高')
-          }
-        },
-        autoClose: 3
-     })
-    },
-    showToast2(){
-      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
-        position: 'bottom',
-        enableHtml: false,  //支持html属性内嵌入标签
-        closeButton: {
-          text: '开挂吧',
-          callback (){
-            console.log('已提高')
-          }
-        },
-        autoClose: 3
-     })
-    },
-    showToast3(){
-      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
-        position: 'left',
-        enableHtml: false,  //支持html属性内嵌入标签
-        closeButton: {
-          text: '开挂吧',
-          callback (){
-            console.log('已提高')
-          }
-        },
-        autoClose: 3
-     })
-    },
-    showToast4(){
-      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
-        position: 'right',
-        enableHtml: false,  //支持html属性内嵌入标签
-        closeButton: {
-          text: '开挂吧',
-          callback (){
-            console.log('已提高')
-          }
-        },
-        autoClose: 3
-     })
-    },
+  //   showToas(){
+  //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+  //       // position: 'center',
+  //       enableHtml: false,  //支持html属性内嵌入标签
+  //       closeButton: {
+  //         text: '开挂吧',
+  //         callback (){
+  //           console.log('已提高')
+  //         }
+  //       },
+  //       autoClose: 3
+  //    })
+  //   },
+  //   showToast(){
+  //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+  //       position: 'center',
+  //       enableHtml: false,  //支持html属性内嵌入标签
+  //       closeButton: {
+  //         text: '开挂吧',
+  //         callback (){
+  //           console.log('已提高')
+  //         }
+  //       },
+  //       autoClose: 3
+  //    })
+  //   },
+  //   showToast1(){
+  //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+  //       position: 'top',
+  //       enableHtml: false,  //支持html属性内嵌入标签
+  //       closeButton: {
+  //         text: '开挂吧',
+  //         callback (){
+  //           console.log('已提高')
+  //         }
+  //       },
+  //       autoClose: 3
+  //    })
+  //   },
+  //   showToast2(){
+  //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+  //       position: 'bottom',
+  //       enableHtml: false,  //支持html属性内嵌入标签
+  //       closeButton: {
+  //         text: '开挂吧',
+  //         callback (){
+  //           console.log('已提高')
+  //         }
+  //       },
+  //       autoClose: 3
+  //    })
+  //   },
+  //   showToast3(){
+  //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+  //       position: 'left',
+  //       enableHtml: false,  //支持html属性内嵌入标签
+  //       closeButton: {
+  //         text: '开挂吧',
+  //         callback (){
+  //           console.log('已提高')
+  //         }
+  //       },
+  //       autoClose: 3
+  //    })
+  //   },
+  //   showToast4(){
+  //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+  //       position: 'right',
+  //       enableHtml: false,  //支持html属性内嵌入标签
+  //       closeButton: {
+  //         text: '开挂吧',
+  //         callback (){
+  //           console.log('已提高')
+  //         }
+  //       },
+  //       autoClose: 3
+  //    })
+  //   },
 
-  }
+   }
 });
       // this.$toast('<a href="http://qq.com">hehe</a>', {
       // enableHtml: true  //支持html属性内嵌入标签

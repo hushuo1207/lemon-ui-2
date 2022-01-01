@@ -7,7 +7,14 @@
 
 <script>
     export default {
-        naem: "LemonTabs"
+        naem: "LemonTabs",
+        props: {
+            selected: {
+                type: Boolean,
+                default: true
+            },
+
+        }
     }
 </script>
 

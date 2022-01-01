@@ -7,7 +7,14 @@
 
 <script>
     export default {
-        naem: "LemonTabs"
+        name: "LemonTabsItem",
+        props: {
+            disabled: {
+                type: Boolean,
+                default: false
+            }
+            
+        }
     }
 </script>
 

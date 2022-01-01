@@ -42,7 +42,35 @@
   </head>
   <body>
     <div id="app">
-      <div>
+      <g-tabs :selected.sync="selectedTab" >
+        <g-tabs-head>
+          <template slot="actions">
+            <button>设置</button>
+          </template>
+          <g-tabs-item name="woman">
+            <g-icon name="settings"></g-icon>美女
+          </g-tabs-item>
+          <g-tabs-item name="finance" disabled>
+            财经
+          </g-tabs-item>
+          <g-tabs-item name="sports">
+            体育
+          </g-tabs-item>
+        </g-tabs-head>
+        <g-tabs-body>
+          <g-tabs-pane name="woman">
+            美女相关资讯
+          </g-tabs-pane>
+          <g-tabs-pane name="finance">
+            财经相关资讯
+          </g-tabs-pane>
+          <g-tabs-pane name="sports">
+            体育相关资讯
+          </g-tabs-pane>
+        </g-tabs-body>
+      </g-tabs>
+    </div>
+      <!-- <div>
 
         <button @click="showToas">wu</button>
         <button @click="showToast">中</button>
@@ -51,8 +79,7 @@
         <button @click="showToast3">左</button>
         <button @click="showToast4">右</button>
 
-      </div>
-    </div>
+      </div> -->
 <!-- 
       <g-layout style="height: 100vh;">
         <g-sider class="demo">sider</g-sider>
@@ -66,7 +93,7 @@
 
 
 
-
+<!-- 
       <g-row gutter="20">
         <g-col span="24"
           :ipad="{span:8}"
@@ -131,7 +158,7 @@
       <hr>
       <div class="box">
         <g-input value="张三" v-model="message"></g-input>
-        {{message}}
+        {{message}} -->
         <!-- <g-input value="张三" disabled></g-input> -->
         <!-- <g-input value="李四" readonly></g-input>
         <g-input value="王五"></g-input>
@@ -145,21 +172,21 @@
       <div class="box">
         <g-input value="赵" error = "姓名不能少于两个字"></g-input>
       </div> -->
-      <div class="box">
+      <!-- <div class="box">
         <g-button :loading="loading1" @click="loading1 = !loading1" > 按钮 </g-button>
         <g-button :loading="loading2" @click="loading2 = !loading2" icon="settings"> 按钮 </g-button>
         <g-button :loading="loading3" @click="loading3 = !loading3" icon="settings" icon-position="right"> 按钮 </g-button>
-        <g-icon name="download"></g-icon>
+        <g-icon name="download"></g-icon> -->
         <!-- <g-button icon="settings" icon-position="up"> 按钮 </g-button>会报错 -->
-        <g-button-group>
+        <!-- <g-button-group> -->
             <!-- <div></div>  为了检测子元素是不是g-button -->
-            <g-button icon="left">上一页</g-button>
+            <!-- <g-button icon="left">上一页</g-button>
             <g-button> 按钮 </g-button>
   
             <g-button icon = "right" icon-position="right">下一页</g-button>
-        </g-button-group>
+        </g-button-group> -->
 
-      </div>
+      <!-- </div> -->
       
     
     <!-- <div id="test"></div> -->
