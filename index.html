@@ -13,6 +13,8 @@
         box-sizing: border-box;
       }
       body {
+        margin: 10px;
+        border: 1px solid black;
         font-size: var(--font-size);
       }
       :root {
@@ -36,40 +38,48 @@
   </head>
   <body>
     <div id="app">
-      <g-row>
-        <g-col></g-col>
-        <g-col></g-col>
-
-      </g-row>
-      <g-row>
+      <g-row gutter="20">
         <g-col>111</g-col>
         <g-col>111</g-col>
         
       </g-row>
-      <g-row>
+      <g-row gutter="20">
         <g-col>111</g-col>
         <g-col>111</g-col>
         <g-col>111</g-col>
         
       </g-row>
-      <g-row>
+      <g-row gutter="20">
         <g-col>111</g-col>
         <g-col>111</g-col>
         <g-col>111</g-col>
         <g-col>111</g-col>
         
       </g-row>
-      <g-row>
+      <g-row gutter="20">
         <g-col span="2">111</g-col>
-        <g-col span="22">111</g-col>
-        
+        <g-col span="20" offset="2">111</g-col>
       </g-row>
-      <g-row>
+      <g-row gutter="20">
+        <g-col span="4">111</g-col>
+        <g-col span="20">111</g-col>
+      </g-row>
+      <g-row gutter="20">
+        <g-col span="4">111</g-col>
+        <g-col span="8" offset="2">111</g-col>
+        <g-col span="8" offset="2">111</g-col>
+      </g-row>
+      <g-row gutter="20">
+        <g-col span="6">111</g-col>
+        <g-col span="6" offset="2">111</g-col>
+        <g-col span="6" offset="4">111</g-col>
+      </g-row>
+      <g-row gutter="20">
         <g-col span="8">111</g-col>
         <g-col span="16">111</g-col>
         
       </g-row>
-
+      <hr>
       <div class="box">
         <g-input value="张三" v-model="message"></g-input>
         {{message}}
