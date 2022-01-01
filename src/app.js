@@ -41,7 +41,7 @@ new Vue({
   },
   methods: {
     showToast(){
-      this.$toast('智商欠费', {
+      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
         position: 'left',
         enableHtml: false,  //支持html属性内嵌入标签
         closeButton: {
