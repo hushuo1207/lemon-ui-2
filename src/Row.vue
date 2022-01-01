@@ -8,6 +8,7 @@
 </template>
 
 <script>
+
     export default {
         name: 'LemonRow',
         props: {
@@ -44,6 +45,7 @@
 <style lang="scss" scoped>
 .row {
     display: flex;
+    flex-wrap: wrap;
     &.align-left {
       justify-content: flex-start;
     }
