@@ -35,12 +35,21 @@ new Vue({
       loading3: false,
       message: 'hai',
   },
-  methods: {
-    // inputChange (e){
-    //   console.log(e.target.value);
-    // }
-    showToast(){
-      this.$toast('我是 message')
-    }
+  created(){
+    // this.$toast('文字', {
+    //   enableHtml: false
+    // })
+
   },
+  methods: {
+    showToast(){
+      // this.$toast('<a href="http://qq.com">hehe</a>', {
+      // enableHtml: true  //支持html属性内嵌入标签
+      //   })
+      
+      this.$toast('hahahahahhha哈哈哈哈哈哈哈哈哈哈哈哈哈好好好好 好好好好好好好好好好好玩', {
+        enableHtml: true  //支持html属性内嵌入标签
+      })
+    }
+  }
 });
