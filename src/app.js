@@ -42,6 +42,48 @@ new Vue({
   methods: {
     showToast(){
       this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+        position: 'center',
+        enableHtml: false,  //支持html属性内嵌入标签
+        closeButton: {
+          text: '开挂吧',
+          callback (){
+            console.log('已提高')
+          }
+        },
+        autoClose: true,
+        autoCloseDelay: 1
+     })
+    },
+    showToast1(){
+      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+        position: 'top',
+        enableHtml: false,  //支持html属性内嵌入标签
+        closeButton: {
+          text: '开挂吧',
+          callback (){
+            console.log('已提高')
+          }
+        },
+        autoClose: true,
+        autoCloseDelay: 1
+     })
+    },
+    showToast2(){
+      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+        position: 'bottom',
+        enableHtml: false,  //支持html属性内嵌入标签
+        closeButton: {
+          text: '开挂吧',
+          callback (){
+            console.log('已提高')
+          }
+        },
+        autoClose: true,
+        autoCloseDelay: 1
+     })
+    },
+    showToast3(){
+      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
         position: 'left',
         enableHtml: false,  //支持html属性内嵌入标签
         closeButton: {
@@ -51,9 +93,23 @@ new Vue({
           }
         },
         autoClose: true,
-        autoCloseDelay: 30
+        autoCloseDelay: 1
      })
-    }
+    },
+    showToast4(){
+      this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
+        position: 'right',
+        enableHtml: false,  //支持html属性内嵌入标签
+        closeButton: {
+          text: '开挂吧',
+          callback (){
+            console.log('已提高')
+          }
+        },
+        autoClose: true,
+        autoCloseDelay: 1
+     })
+    },
 
   }
 });
