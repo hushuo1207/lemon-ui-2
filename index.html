@@ -18,12 +18,12 @@
         font-size: var(--font-size);
       }
       #app {
-      /* margin: 20px; */
+        /* margin: 20px; */
       }
       :root {
         /* --button-height:var(--button-height); */
         --font-size: 14px;
-        --button-height: 32px; 
+        --button-height: 32px;
         --button-bg: white;
         --button-active-bg: #eee;
         --border-radius: 4px;
@@ -31,86 +31,107 @@
         --border-color: #999;
         --border-color-hover: #666;
       }
-
     </style>
     <style>
-      .box{
+      .box {
         margin: 20px;
       }
-
     </style>
   </head>
   <body>
-    <div id="app" style="padding-top: 100px; padding-left: 100px;border: 1px solid red">
+    <div
+      id="app"
+      style="padding-top: 100px; padding-left: 100px;border: 1px solid red"
+    >
+      <div
+        style="overflow: hidden;border: 1px solid green; padding: 5px;  padding-bottom: 40px;"
+        @click="yyy"
+      >
+        <g-collapse >
+          <g-collapse-item title="标题1">
+            内容一
+          </g-collapse-item>
+          <g-collapse-item title="标题2">
+            内容二
+          </g-collapse-item>
+          <g-collapse-item title="标题3">
+            内容三
+          </g-collapse-item></g-collapse>
+      </div>
 
-      <div style="overflow: hidden;border: 1px solid green; padding: 5px;  padding-bottom: 40px;"
-      @click="yyy">
-      <g-popover>
-        <template slot="content" slot-scope="{close}">
-          <div>popover内容</div>
-          <div><a href="https://baidu.com">百度</a></div>
-          <div><button @click="close">小调皮</button></div>
-        </template>
-        <button>点我</button>
-      </g-popover>
-      <g-popover  position="bottom">
-        <template slot="content">
-          <div>popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        </template>
-        <button>Click me</button>
-      </g-popover>
-      <g-popover position="left">
-        <template slot="content">
-          <div>popover内容</div>
-        </template>
-        <button>点我</button>
-      </g-popover>
-      <g-popover position="right">
-        <template slot="content">
-          <div>popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        </template>
-        <button>Click me</button>
-      </g-popover>
-    </div>
-
-    <div style="overflow: hidden;border: 1px solid green; padding: 5px;"
-      @click="yyy">
-      <g-popover trigger="hover">
-        <template slot="content">
-          <div>popover内容</div>
-        </template>
-        <button>点我</button>
-      </g-popover>
-      <g-popover  position="bottom"  trigger="hover">
-        <template slot="content">
-          <div>popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        </template>
-        <button>Click me</button>
-      </g-popover>
-      <g-popover position="left" trigger="hover">
-        <template slot="content">
-          <div>popover内容</div>
-        </template>
-        <button>点我</button>
-      </g-popover>
-      <g-popover position="right" trigger="hover">
-        <template slot="content">
-          <div>popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        </template>
-        <button>Click me</button>
-      </g-popover>
-
-    </div>
-      <hr>
-      <br>
+      <div
+        style="overflow: hidden;border: 1px solid green; padding: 5px;"
+        @click="yyy"
+      >
+        <g-popover>
+          <template slot="content" slot-scope="{close}">
+            <div>popover内容</div>
+            <div><a href="https://baidu.com">百度</a></div>
+            <div><button @click="close">小调皮</button></div>
+          </template>
+          <button>点我</button>
+        </g-popover>
+        <g-popover position="bottom">
+          <template slot="content">
+            <div>
+              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+          </template>
+          <button>Click me</button>
+        </g-popover>
+        <g-popover position="left">
+          <template slot="content">
+            <div>popover内容</div>
+          </template>
+          <button>点我</button>
+        </g-popover>
+        <g-popover position="right">
+          <template slot="content">
+            <div>
+              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+          </template>
+          <button>Click me</button>
+        </g-popover>
+        <g-popover trigger="hover">
+          <template slot="content">
+            <div>popover内容</div>
+          </template>
+          <button>点我</button>
+        </g-popover>
+        <g-popover position="bottom" trigger="hover">
+          <template slot="content">
+            <div>
+              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+          </template>
+          <button>Click me</button>
+        </g-popover>
+        <g-popover position="left" trigger="hover">
+          <template slot="content">
+            <div>popover内容</div>
+          </template>
+          <button>点我</button>
+        </g-popover>
+        <g-popover position="right" trigger="hover">
+          <template slot="content">
+            <div>
+              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+          </template>
+          <button>Click me</button>
+        </g-popover>
+      </div>
+      <hr />
+      <br />
       <div>---------</div>
-      <hr>
-      <br>
+      <hr />
+      <br />
       <div>----------</div>
-      <g-tabs :selected.sync="selectedTab" >
+      <g-tabs :selected.sync="selectedTab">
         <div>hi</div>
       </g-tabs>
-      <g-tabs :selected.sync="selectedTab" >
+      <g-tabs :selected.sync="selectedTab">
         <g-tabs-head>
           <template slot="actions">
             <button>设置</button>
@@ -138,7 +159,7 @@
         </g-tabs-body>
       </g-tabs>
     </div>
-      <!-- <div>
+    <!-- <div>
 
         <button @click="showToas">wu</button>
         <button @click="showToast">中</button>
@@ -148,7 +169,7 @@
         <button @click="showToast4">右</button>
 
       </div> -->
-<!-- 
+    <!-- 
       <g-layout style="height: 100vh;">
         <g-sider class="demo">sider</g-sider>
         <g-layout>
@@ -159,9 +180,7 @@
         
       </g-layout> -->
 
-
-
-<!-- 
+    <!-- 
       <g-row gutter="20">
         <g-col span="24"
           :ipad="{span:8}"
@@ -227,8 +246,8 @@
       <div class="box">
         <g-input value="张三" v-model="message"></g-input>
         {{message}} -->
-        <!-- <g-input value="张三" disabled></g-input> -->
-        <!-- <g-input value="李四" readonly></g-input>
+    <!-- <g-input value="张三" disabled></g-input> -->
+    <!-- <g-input value="李四" readonly></g-input>
         <g-input value="王五"></g-input>
       </div>
       <div class="box">
@@ -240,23 +259,22 @@
       <div class="box">
         <g-input value="赵" error = "姓名不能少于两个字"></g-input>
       </div> -->
-      <!-- <div class="box">
+    <!-- <div class="box">
         <g-button :loading="loading1" @click="loading1 = !loading1" > 按钮 </g-button>
         <g-button :loading="loading2" @click="loading2 = !loading2" icon="settings"> 按钮 </g-button>
         <g-button :loading="loading3" @click="loading3 = !loading3" icon="settings" icon-position="right"> 按钮 </g-button>
         <g-icon name="download"></g-icon> -->
-        <!-- <g-button icon="settings" icon-position="up"> 按钮 </g-button>会报错 -->
-        <!-- <g-button-group> -->
-            <!-- <div></div>  为了检测子元素是不是g-button -->
-            <!-- <g-button icon="left">上一页</g-button>
+    <!-- <g-button icon="settings" icon-position="up"> 按钮 </g-button>会报错 -->
+    <!-- <g-button-group> -->
+    <!-- <div></div>  为了检测子元素是不是g-button -->
+    <!-- <g-button icon="left">上一页</g-button>
             <g-button> 按钮 </g-button>
   
             <g-button icon = "right" icon-position="right">下一页</g-button>
         </g-button-group> -->
 
-      <!-- </div> -->
-      
-    
+    <!-- </div> -->
+
     <!-- <div id="test"></div> -->
     <script src="./src/app.js"></script>
     <script src="//at.alicdn.com/t/font_3098133_40gulpm8upg.js"></script>
