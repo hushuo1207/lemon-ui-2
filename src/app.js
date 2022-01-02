@@ -53,6 +53,9 @@ new Vue({
 
   },
   methods: {
+    yyy(){
+      console.log('yyy')
+    },
   //   showToas(){
   //     this.$toast(`智商为${parseInt(Math.random() * 100)}智商欠费`, {
   //       // position: 'center',
