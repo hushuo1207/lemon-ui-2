@@ -47,21 +47,22 @@
         style="overflow: hidden;border: 1px solid green; padding: 5px;  padding-bottom: 40px;"
         @click="yyy"
       >
-      <g-collapse :selected.sync="selected">
+      <g-collapse :selected.sync="selectedTab">
         <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
         <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
         <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
       </g-collapse>
-      {{selected}}
-      <g-collapse :selected.sync="selected">
+      {{`${typeof selectedTab}`}}
+      <g-collapse :selected.sync="selectedTab2" single>
         <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
         <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
         <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
       </g-collapse>
-      {{selected}}
+      {{selectedTab2}}
       </div>
+    </div>
 
-      <div
+      <!-- <div
         style="overflow: hidden;border: 1px solid green; padding: 5px;"
         @click="yyy"
       >
@@ -160,7 +161,7 @@
           </g-tabs-pane>
         </g-tabs-body>
       </g-tabs>
-    </div>
+    </div> -->
     <!-- <div>
 
         <button @click="showToas">wu</button>
