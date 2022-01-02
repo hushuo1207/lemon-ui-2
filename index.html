@@ -41,26 +41,35 @@
     </style>
   </head>
   <body>
-    <div style="height:1000px; width: 1000px;border: 2px solid yellow" >
-        哈
-    </div>
-    
     <div id="app" style="padding-top: 100px; padding-left: 100px;border: 1px solid red">
 
       <div style="overflow: hidden;border: 1px solid green; padding: 5px;"
       @click="yyy">
       <g-popover>
         <template slot="content">
+          <div>popover内容</div>
+        </template>
+        <button>点我</button>
+      </g-popover>
+      <g-popover  position="bottom">
+        <template slot="content">
           <div>popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
         </template>
         <button>Click me</button>
       </g-popover>
-      <g-popover>
+      <g-popover position="left">
         <template slot="content">
           <div>popover内容</div>
         </template>
         <button>点我</button>
       </g-popover>
+      <g-popover position="right">
+        <template slot="content">
+          <div>popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        </template>
+        <button>Click me</button>
+      </g-popover>
+
     </div>
       <hr>
       <br>
