@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import '../assets/icon.js'
 export default {
   name: "LemonIcon",
   props: ["name"],

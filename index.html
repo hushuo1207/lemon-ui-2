@@ -22,14 +22,14 @@
       }
       :root {
         /* --button-height:var(--button-height); */
-        --font-size: 14px;
+        /* --font-size: 14px;
         --button-height: 32px;
         --button-bg: white;
         --button-active-bg: #eee;
         --border-radius: 4px;
         --color: #333;
         --border-color: #999;
-        --border-color-hover: #666;
+        --border-color-hover: #666; */
       }
     </style>
     <style>
@@ -59,6 +59,21 @@
         <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
       </g-collapse>
       {{selectedTab2}}
+      </div>
+
+      <g-button :loading="loading"> 按钮 </g-button>
+      <g-button :loading="loading2" @click="loading2 = !loading2" icon="settings"> 按钮 </g-button>
+      <g-button :loading="loading3" @click="loading3 = !loading3" icon="settings" icon-position="right"> 按钮 </g-button>
+      <g-icon name="download"></g-icon> 
+      <div>
+
+        <g-button @click="showToas">wu</g-button>
+        <g-button @click="showToast">中</g-button>
+        <g-button @click="showToast1">上</g-button>
+        <g-button @click="showToast2">下</g-button>
+        <g-button @click="showToast3">左</g-button>
+        <g-button @click="showToast4">右</g-button>
+
       </div>
     </div>
 
@@ -162,16 +177,7 @@
         </g-tabs-body>
       </g-tabs>
     </div> -->
-    <!-- <div>
 
-        <button @click="showToas">wu</button>
-        <button @click="showToast">中</button>
-        <button @click="showToast1">上</button>
-        <button @click="showToast2">下</button>
-        <button @click="showToast3">左</button>
-        <button @click="showToast4">右</button>
-
-      </div> -->
     <!-- 
       <g-layout style="height: 100vh;">
         <g-sider class="demo">sider</g-sider>
@@ -280,6 +286,6 @@
 
     <!-- <div id="test"></div> -->
     <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_3098133_40gulpm8upg.js"></script>
+    <!-- <script src="//at.alicdn.com/t/font_3098133_40gulpm8upg.js"></script> -->
   </body>
 </html>
