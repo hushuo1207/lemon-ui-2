@@ -28,6 +28,6 @@ import CollapseItem from "../../../src/CollapseItem.vue"
 <style scoped>
 .collapse-demo{
   margin: 12px;
-  z-index: 20;
+  /* z-index: 20; */
 }
 </style>

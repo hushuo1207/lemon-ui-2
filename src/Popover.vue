@@ -191,6 +191,8 @@ $border-radius: 4px;
   &.position-left {
     transform: translateX(-100%);
     margin-left: -10px;
+    
+    // z-index:20;//仅用于测试
     &::before,
     &::after {
       transform: translateY(-50%);

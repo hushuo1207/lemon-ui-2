@@ -1,72 +1,40 @@
 <template>
-    <div>
-        <l-popover>
-          <template slot="content" slot-scope="{close}">
-            <div>popover内容</div>
-            <div><a href="https://baidu.com">百度</a></div>
-            <div><button @click="close">小调皮</button></div>
-          </template>
-          <button>点我</button>
-        </l-popover>
-        <l-popover position="bottom">
-          <template slot="content">
-            <div>
-              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            </div>
-          </template>
-          <button>Click me</button>
-        </l-popover>
-        <l-popover position="left">
-          <template slot="content">
-            <div>popover内容</div>
-          </template>
-          <button>点我</button>
-        </l-popover>
-        <l-popover position="right">
-          <template slot="content">
-            <div>
-              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            </div>
-          </template>
-          <button>Click me</button>
-        </l-popover>
-        <l-popover trigger="hover">
-          <template slot="content">
-            <div>popover内容</div>
-          </template>
-          <button>点我</button>
-        </l-popover>
-        <l-popover position="bottom" trigger="hover">
-          <template slot="content">
-            <div>
-              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            </div>
-          </template>
-          <button>Click me</button>
-        </l-popover>
-        <l-popover position="left" trigger="hover">
-          <template slot="content">
-            <div>popover内容</div>
-          </template>
-          <button>点我</button>
-        </l-popover>
-        <l-popover position="right" trigger="hover">
-          <template slot="content">
-            <div>
-              popoveraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            </div>
-          </template>
-          <button>Click me</button>
-        </l-popover>
-    </div>
+<div style="padding-top: 16px;">
+  <l-popover>
+    <l-button>上方弹出</l-button>
+    <template slot="content">
+      <a href="https://github.com/hushuo1207/lemon-ui-2">这是个a链接</a>
+    </template>
+  </l-popover>
+  <l-popover position="bottom">
+    <l-button>下方弹出</l-button>
+    <template slot="content">
+     <strong style="color: #f2d091">加粗的提示</strong>
+    </template>
+  </l-popover>
+  <l-popover position="left">
+    <l-button>左边弹出</l-button>
+    <template slot="content">
+       普通文本内容
+    </template>
+  </l-popover>
+  <l-popover position="right">
+    <l-button>右边弹出</l-button>
+    <template slot="content">
+      普通文本内容
+    </template>
+  </l-popover>
+</div>
 </template>
 
 <script>
+import Button from '../../../src/Button.vue'
 import Popover from "../../../src/Popover.vue"
     export default {
       name: 'PopoverDemo',
         components: {
-          'l-popover': Popover
+          'l-button': Button,
+          'l-popover': Popover,
         }
     }
 </script>

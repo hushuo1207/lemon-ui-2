@@ -37,7 +37,7 @@ title: Toast    折叠面板
 ```vue
 <template>
     <div>
-      <i-button @click="onClickButton">上方弹出</i-button>
+      <l-button @click="onClickButton">上方弹出</l-button>
     </div>
 </template>
 <script>
@@ -71,7 +71,7 @@ methods: {
 ```vue
 <template>
     <div>
-      <i-button @click="onClickButton">上方弹出</i-button>
+      <l-button @click="onClickButton">上方弹出</l-button>
     </div>
 </template>
 <script>
