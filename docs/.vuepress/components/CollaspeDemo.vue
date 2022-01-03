@@ -1,16 +1,11 @@
 <template>
-    <div>
-      <l-collapse :selected.sync="selectedTab">
+    <div class="collapse-demo">
+      <l-collapse :selected.sync="selectedTab" single>
         <l-collapse-item title="标题1" name="1">内容1</l-collapse-item>
         <l-collapse-item title="标题2" name="2">内容2</l-collapse-item>
         <l-collapse-item title="标题3" name="3">内容3</l-collapse-item>
       </l-collapse>
-      <l-collapse :selected.sync="selectedTab2" single>
-        <l-collapse-item title="标题1" name="1">内容1</l-collapse-item>
-        <l-collapse-item title="标题2" name="2">内容2</l-collapse-item>
-        <l-collapse-item title="标题3" name="3">内容3</l-collapse-item>
-      </l-collapse>
-      </div>
+    </div>
 </template>
 
 <script>
@@ -20,8 +15,7 @@ import CollapseItem from "../../../src/CollapseItem.vue"
       name: 'CollapseDemo',
         data() {
           return {
-            selectedTab: ['1','2'],
-            selectedTab2: ['2']
+            selectedTab: ['2']
           }
 
         },
@@ -31,6 +25,9 @@ import CollapseItem from "../../../src/CollapseItem.vue"
     }
 </script>
 
-<style>
-
+<style scoped>
+.collapse-demo{
+  margin: 12px;
+  z-index: 20;
+}
 </style>

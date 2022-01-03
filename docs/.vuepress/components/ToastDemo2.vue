@@ -10,7 +10,6 @@
 <script>
 import Vue from "vue";
 import Button from '../../../src/Button'
-import Toast from "../../../src/Toast.vue"
 import plugin from '../../../src/plugin.js'
 
 Vue.use(plugin)

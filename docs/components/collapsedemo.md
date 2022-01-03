@@ -1,36 +1,48 @@
 ---
 title: collapse  按钮
 ---
-# 按钮
+# Collapse 折叠面板
 
-## 基本用法：
+**使用方法**
+
+### 基本用法
+
+<ClientOnly>
+<CollaspeDemo></CollaspeDemo>
+</ClientOnly>
 
 
-<CollapseDemo></CollapseDemo>
 
-## 示例代码：
+ 示例代码
 
-``` html
-<g-button>默认按钮</g-button>
-<g-button icon="settings">左边</g-button>
-<g-button icon="settings" iconPosition="right">右边</g-button>
-<g-button :loading="true">加载中</g-button>
-<g-button disabled>默认按钮</g-button>  
+```vue
+<l-collapse :selected.sync="selectedTab" single>
+  <l-collapse-item title="标题1" name="1">hello，你好呢。</l-collapse-item>
+  <l-collapse-item title="标题2" name="2">你知道我在想你吗?</l-collapse-item>
+  <l-collapse-item title="标题3" name="3">我在等你呀!</l-collapse-item>
+</l-collapse>
+
+<script>
+export default {
+  data() {
+    return {
+      selectedTab: ['1']
+    }
+  },
+}
+</script>
 ```
 
-
-## Attributes
+# Attributes
 
 ### Collapse 
 |参数| 说明 |  类型  | 可选值 | 默认值 |
 | :-------------: |:-------------:| :-----:|:-----:|:-----:|
-|selected| 选中项 | Array |--|[]|
-| single | 是否单一展示 |    boolean | true、false|false
+|selected| 选中项 | Array['name'] |--|[]|
+| single | 是否单一展示 |    boolean | true、false|false|
 
 ### CollapseItem
 |参数| 说明 |  类型  | 可选值 | 默认值 |
 | :-------------: |:-------------:| :-----:|:-----:|:-----:|
 |title| 标题 | String |--|--|
 | name | 唯一标识，必填 |    String |-- |--|
-
-
