@@ -3,28 +3,34 @@ title: Input     s输入框
 ---
 # 按钮
 
-## 基本用法：
+### 基本用法：
 
+预览
 
+<ClientOnly>
 <InputDemo></InputDemo>
+</ClientOnly>
 
 ## 示例代码：
 
 ``` html
-<g-button>默认按钮</g-button>
-<g-button icon="settings">左边</g-button>
-<g-button icon="settings" iconPosition="right">右边</g-button>
-<g-button :loading="true">加载中</g-button>
-<g-button disabled>默认按钮</g-button>  
+<l-input placeholder="请输入内容"></l-input>
+<l-input value="默认内容"></l-input>
+<l-input disabled value="默认内容"></l-input>
+<l-input error="用户名不低于两个字"></l-input>
+
+<!--可支持数据绑定-->
+<l-input v-model="value"></l-input>
+<p>value: {{value}}</p>
 ```
 
-## 属性：  attributes
+## Attributes
 
 
-|     属性       |   说明    |  类型    |  可选值         |     默认值    |
-|:--------------:|:-------:|:--------:|:--------------:|:-----------:|
-|   icon         |设置内置的icon|String      | setting，info，left，right，download，loading, down |  --      |
-| iconPositon    | 图标位置   |String   |    left、right |  left       |
-| loading        | 加载状态   |String   |    true、false |  false      |
-
-
+|参数| 说明 |  类型  | 可选值 | 默认值 |
+| :-------------: |:-------------:| :-----:|:-----:|:-----:|
+|value| 设置默认内容 | String |--|-- |
+|disabled| 是否禁用状态 | Boolean |true, false|false
+|readonly| 是否只读状态 | Boolean |true, false|false
+|placeholder| 提示信息 | String |--|-- |
+|error| 错误信息 | String |--|-- |

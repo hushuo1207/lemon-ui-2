@@ -1,13 +1,19 @@
 <template>
-      <div class="box">
-        <l-input value="李四" readonly></l-input>
-        <l-input value="王五" placeholder="请输入内容"></l-input>
-        <l-input value="赵"></l-input>
-        <l-input value="赵" error = "姓名不能少于两个字"></l-input>
+  <div>
+    <div class="easy">
+      <l-input placeholder="请输入内容"></l-input>
+      <l-input value="默认内容"></l-input>
+      <l-input disabled value="默认内容"></l-input>
+    </div>
+    <div class="error">
+      <l-input error="用户名不低于两个字"></l-input>
+    </div>
+    <div class="bindDate">
+      <l-input v-model="value"></l-input>
+      <p>value: {{value}}</p>
+    </div>
+  </div>
 
-        <l-input value="张三" v-model="message"></l-input>
-        message:{{message}}
-      </div>
 </template>
 
 <script>
@@ -16,7 +22,7 @@ import Input from "../../../src/Input.vue";
       name: 'InputDemo',
         data(){
           return {
-            message: '数据绑定'
+            value: '数据绑定'
           }
         },
         components: {
@@ -26,6 +32,17 @@ import Input from "../../../src/Input.vue";
 }
 </script>
 
-<style>
+<style lang="scss" >
+div.easy{
+  margin-top: 10px;
+  margin-bottom: 8px;
+  > input{
+    margin-top: 8px;
+  }
+}
 
+div.bindDate{
+  margin-top: 8px;
+  height: 64px;
+}
 </style>

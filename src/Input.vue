@@ -50,9 +50,11 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
 $red: #f1453d;
 .wrapper{
     font-size: $font-size;
+    display: inline-flex;
+    align-items: center;
     > input {  
         height: $height;
-        border: 1xp solid $border-color;
+        border: 1px solid $border-color;
         border-radius: $border-radius;
         padding: 0 8px;
         font-size: inherit;
@@ -79,7 +81,7 @@ $red: #f1453d;
         fill: $red;
     }
     .errorMessage {
-        color: red;
+        color: $red;
     }
 }
 </style>

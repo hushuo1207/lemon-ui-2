@@ -61,7 +61,7 @@ $disabled-text-color: grey;
     align-items: center;
     &.active {
       color: $blue;
-      font-weight: bold;
+      // font-weight: bold;
 
     }
     &.disabled {
