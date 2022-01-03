@@ -1,12 +1,11 @@
 <template>
-    <div>
-        <l-button @click="$toast('点击弹出提示')">默认</l-button>
-        <l-button @click="$toast('点击弹出提示', {position: 'center', autoClose: false})">中</l-button>
-        <l-button @click="$toast('点击弹出提示', {position: 'top'})">上</l-button>
-        <l-button @click="$toast('点击弹出提示', {position: 'bottom'})">下</l-button>
-        <l-button @click="$toast('点击弹出提示', {position: 'left'})">左</l-button>
-        <l-button @click="$toast('点击弹出提示', {position: 'right'})">右</l-button>
-
+<div class="toastdemo1">
+    <l-button @click="$toast('点击弹出提示')">默认上方</l-button>
+    <l-button @click="$toast('点击弹出提示', {position: 'center'})">中间弹出</l-button>
+    <l-button @click="$toast('点击弹出提示', {position: 'top'})">上方弹出</l-button>
+    <l-button @click="$toast('点击弹出提示', {position: 'bottom'})">下方弹出</l-button>
+    <l-button @click="$toast('点击弹出提示', {position: 'left'})">左边弹出</l-button>
+    <l-button @click="$toast('点击弹出提示', {position: 'right'})">右边弹出</l-button>
     </div>
 </template>
 
@@ -27,7 +26,14 @@ Vue.use(plugin)
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 .wrapper{
     z-index: 20;
+}
+.toastdemo1{
+    margin: 12px;
 }
 </style>

@@ -2,14 +2,33 @@
   <div style="padding-top: 16px;">
 
     <div>
-      <i-button @click="onClickButton">上方弹出</i-button>
+      <l-button @click="onClickButton">上方弹出</l-button>
     </div>
 
   </div>
 </template>
+<script>
+import Vue from "vue";
+import Button from '../../../src/Button'
+import Toast from "../../../src/Toast.vue"
+import plugin from '../../../src/plugin.js'
+
+Vue.use(plugin)
+
+export default {
+  components: {'l-button':Button},
+  methods: {
+    onClickButton () {
+      this.$toast('<strong style="color:#f2d091;">加粗的提示</strong>', {
+        enableHtml: true
+      })
+    }
+  },
+}
+</script>
 <style>
-.ice-toast {
-  z-index: 30 !important;
+.wrapper{
+    z-index: 20;
 }
 </style>
 <style scoped>
@@ -17,22 +36,5 @@
   box-sizing: border-box;
 }
 
+
 </style>
-<script>
-import plugin from '../../../src/plugin'
-import IButton from '../../../src/button'
-import Vue from 'vue'
-
-Vue.use(plugin)
-
-export default {
-  components: {IButton},
-  methods: {
-    onClickButton () {
-      this.$toast('<strong style="color:red;">加粗的提示</strong>', {
-        enableHtml: true
-      })
-    }
-  },
-}
-</script>
