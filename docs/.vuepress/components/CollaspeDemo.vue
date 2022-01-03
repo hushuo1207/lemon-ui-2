@@ -18,9 +18,11 @@ import Collapse from "../../../src/Collapse.vue"
 import CollapseItem from "../../../src/CollapseItem.vue"
     export default {
       name: 'CollapseDemo',
-        data: {
-          selectedTab: ['1','2'],
-          selectedTab2: ['2']
+        data() {
+          return {
+            selectedTab: ['1','2'],
+            selectedTab2: ['2']
+          }
 
         },
         components: {
