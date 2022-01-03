@@ -1,30 +1,90 @@
 ---
 title: Layout    布局
 ---
-# 按钮
+# Layout 布局
 
-## 基本用法：
+**使用方法**
 
+### 布局一
 
+#### 预览
+<ClientOnly>
 <LayoutDemo></LayoutDemo>
+</ClientOnly>
 
 ## 示例代码：
 
 ``` html
-<g-button>默认按钮</g-button>
-<g-button icon="settings">左边</g-button>
-<g-button icon="settings" iconPosition="right">右边</g-button>
-<g-button :loading="true">加载中</g-button>
-<g-button disabled>默认按钮</g-button>  
+  <l-layout style="color: white; margin-bottom:50px;">
+    <l-header style="height: 50px; background:#9E91F2;">
+      header
+    </l-header>
+    <l-content style="height: 100px; background:#7B62D9;">
+      content
+    </l-content>
+    <l-footer style="height: 50px; background:#9E91F2;">
+      footer
+    </l-footer>
+  </l-layout>
 ```
 
-## 属性：  attributes
+
+### 布局二
+
+#### 预览
+
+<ClientOnly>
+<LayoutDemo2></LayoutDemo2>
+</ClientOnly>
+
+#### 示例代码
 
 
-|     属性       |   说明    |  类型    |  可选值         |     默认值    |
-|:--------------:|:-------:|:--------:|:--------------:|:-----------:|
-|   icon         |设置内置的icon|String      | setting，info，left，right，download，loading, down |  --      |
-| iconPositon    | 图标位置   |String   |    left、right |  left       |
-| loading        | 加载状态   |String   |    true、false |  false      |
+``` html
+<l-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+  <l-header style="height: 50px; background:#f2d901;">
+    header
+  </l-header>
+  <l-layout>
+    <l-sider style="height: 100px; background:#f2e6c2; width:200px; color: black;">
+      sider
+    </l-sider>
+    <l-content style="height: 100px; background:#d9a714;">
+      content
+    </l-content>
+  </l-layout>
+  <l-footer style="height: 50px; background:#f2d901;">
+    footer
+  </l-footer>
+</l-layout>
+```
+
+### 布局三
+
+#### 预览
+
+<ClientOnly>
+<LayoutDemo3></LayoutDemo3>
+</ClientOnly>
+
+#### 示例代码
 
 
+``` html
+<l-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+  <l-sider style=" background:#f2e6c2; width:200px; color: black;">
+    sider
+  </l-sider>
+  <l-layout>
+    <l-header style="height: 50px; background:#f2d901;">
+      header
+    </l-header>
+    <l-content style="height: 100px; background:#d9a714;">
+      content
+    </l-content>
+    <l-footer style="height: 50px; background:#f2d901;">
+      footer
+    </l-footer>
+  </l-layout>
+</l-layout>
+```

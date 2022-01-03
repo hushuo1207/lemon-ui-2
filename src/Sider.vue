@@ -1,8 +1,8 @@
 <template>
   <transition name="slide">
-    <div class="sider" v-if="visible">
+    <div class="sider">
     <slot></slot>
-      <button @click="visible=false">close</button>
+      <!-- <button @click="visible=false">close</button> v-if="visible" -->
   </div>
   </transition>
 </template>
