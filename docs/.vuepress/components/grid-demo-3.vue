@@ -1,88 +1,59 @@
 <template>
-  <div>
-    <l-row class="demoRow">
+  <div style="padding-top: 16px;">
+    <l-row class="demoRow" gutter="10">
       <l-col span="8">
         <div class="demoCol">8</div>
       </l-col>
-      <l-col span="8">
-        <div class="demoCol">8</div>
-      </l-col>
-      <l-col span="8">
+      <l-col span="8" offset="8">
         <div class="demoCol">8</div>
       </l-col>
     </l-row>
-    <l-row class="demoRow">
-      <l-col span="6">
+    <l-row class="demoRow" gutter="10">
+      <l-col span="6" offset="6">
         <div class="demoCol">6</div>
       </l-col>
-      <l-col span="6">
-        <div class="demoCol">6</div>
-      </l-col>
-      <l-col span="6">
-        <div class="demoCol">6</div>
-      </l-col>
-      <l-col span="6">
+      <l-col span="6" offset="6">
         <div class="demoCol">6</div>
       </l-col>
     </l-row>
-    <l-row class="demoRow">
+    <l-row class="demoRow" gutter="10">
       <l-col span="4">
         <div class="demoCol">4</div>
       </l-col>
-      <l-col span="4">
+      <l-col span="4" offset="4">
         <div class="demoCol">4</div>
       </l-col>
-      <l-col span="4">
-        <div class="demoCol">4</div>
-      </l-col>
-      <l-col span="4">
-        <div class="demoCol">4</div>
-      </l-col>
-      <l-col span="4">
-        <div class="demoCol">4</div>
-      </l-col>
-      <l-col span="4">
+      <l-col span="4" offset="8">
         <div class="demoCol">4</div>
       </l-col>
     </l-row>
-    <l-row class="demoRow">
+    <l-row class="demoRow" gutter="10">
       <l-col span="2">
+        <div class="demoCol">2</div>
+      </l-col>
+      <l-col span="2" offset="2">
         <div class="demoCol">2</div>
       </l-col>
       <l-col span="2">
         <div class="demoCol">2</div>
       </l-col>
-      <l-col span="2">
+      <l-col span="2" offset="2">
         <div class="demoCol">2</div>
       </l-col>
       <l-col span="2">
         <div class="demoCol">2</div>
       </l-col>
-      <l-col span="2">
+      <l-col span="2" offset="2">
         <div class="demoCol">2</div>
       </l-col>
       <l-col span="2">
         <div class="demoCol">2</div>
       </l-col>
-      <l-col span="2">
-        <div class="demoCol">2</div>
-      </l-col>
-      <l-col span="2">
-        <div class="demoCol">2</div>
-      </l-col>
-      <l-col span="2">
-        <div class="demoCol">2</div>
-      </l-col>
-      <l-col span="2">
-        <div class="demoCol">2</div>
-      </l-col>
-      <l-col span="2">
-        <div class="demoCol">2</div>
-      </l-col>
-      <l-col span="2">
+      <l-col span="2" offset="2">
         <div class="demoCol">2</div>
       </l-col>
     </l-row>
+
   </div>
 </template>
 

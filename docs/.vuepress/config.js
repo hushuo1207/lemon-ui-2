@@ -27,7 +27,7 @@ module.exports = {
                 '/components/griddemo',
                 '/components/layoutdemo',
                 '/components/toastdemo',
-                '/components/collaspedemo',
+                '/components/collapsedemo',
                 '/components/popoverdemo',
                 
              ],
