@@ -1,9 +1,9 @@
 module.exports = {
-  base:'/lemon-ui/',
+  base:'/lemon-ui-2/',
   title: "Lemon-UI",
   description: "一个好用的UI框架",
   themeConfig: {
-    logo: "/assets/img/logo.png",
+    logo: "/lemon.png",
     nav: [
       { text: "主页", link: "/" },
       { text: "文档", link: "/start/" },

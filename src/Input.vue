@@ -1,14 +1,14 @@
 <template>
-    <div class="wrapper" :class="{'error': error}">
+    <div class="wrapper" :class="{'error': errorMessage}">
         <input  :value="value" :disabled="disabled" :readonly="readonly" type="text"
         @change="$emit('change',$event.target.value)"
         @input="$emit('input',$event.target.value)"
         @focus="$emit('focus',$event.target.value)"
         @blur="$emit('blur',$event.target.value)"
          />
-        <template v-if="error">
+        <template v-if="errorMessage">
             <Icon name = "error" class="icon-error"></Icon>
-            <span class="errorMessage">{{error}}</span>
+            <span class="errorMessage">{{errorMessage}}</span>
         </template>
     </div>
 </template>
@@ -33,8 +33,43 @@ import Icon from './Icon'
                 default: false
             },
             error: {
-                type: String
+                type: String,
+                default: ''
             },
+            errorWords: {
+                type: String,
+            }
+        },
+        // computed:{
+        //     valuet(){
+        //         return this.value;
+        //     }
+        // }
+        data(){
+            return{
+                errorMess: {
+                    type: String,
+                    default: ''
+                }
+            }
+        },
+        created(){
+        },
+        computed:{
+            errorMessage(){
+                console.log(this.error);console.log( this.errorWords);
+                if(this.error){
+                    if( this.value.length >= this.errorWords){
+                        
+                        return '';
+                    }else{
+                        return this.error;
+                    }
+                }
+                return '';
+            }
+            
+            
         }
         
     }

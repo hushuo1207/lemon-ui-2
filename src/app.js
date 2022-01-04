@@ -45,15 +45,21 @@ Vue.component("g-collapse-item", CollapseItem);
 
 new Vue({
   el: "#app",
+  props:{
+   
+  },
   data: {
       loading1: false,
       loading2: false,
       loading3: false,
       message: 'hai',
+      message1: 'h',
+      errorWords: 2,
+      errorWords1: 3,
       // selectedTab: 'sports',
       selectedTab: ['1','2'],
-      selectedTab2: ['2']
-
+      selectedTab2: ['2'],
+       value: 'z'
   },
   created(){
     

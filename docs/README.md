@@ -1,5 +1,6 @@
 ---
 home: true
+heroImage: /lemon.png
 heroText: Lemon-UI
 tagline: 一个基于Vue的 UI 组件库
 actionText: 快速上手 →

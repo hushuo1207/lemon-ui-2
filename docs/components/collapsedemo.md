@@ -15,7 +15,7 @@ title: collapse  按钮
 
  示例代码
 
-```vue
+```html
 <l-collapse :selected.sync="selectedTab" single>
   <l-collapse-item title="标题1" name="1">hello，你好呢。</l-collapse-item>
   <l-collapse-item title="标题2" name="2">你知道我在想你吗?</l-collapse-item>
