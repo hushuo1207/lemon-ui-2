@@ -1,7 +1,7 @@
 ---
-title: Input     s输入框
+title: Input - 输入框
 ---
-# 按钮
+# Input  输入框
 
 ### 基本用法：
 
@@ -17,7 +17,7 @@ title: Input     s输入框
 <l-input placeholder="请输入内容"></l-input>
 <l-input value="默认内容"></l-input>
 <l-input disabled value="默认内容"></l-input>
-<l-input error="用户名不低于两个字"></l-input>
+<l-input error="错误信息"></l-input>
 
 <!--可支持数据绑定-->
 <l-input v-model="value"></l-input>

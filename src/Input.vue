@@ -22,7 +22,8 @@ import Icon from './Icon'
         },
         props:{
             value: {
-                type: String
+                type: String,
+                default: ''
             },
             disabled: {
                 type: Boolean,
@@ -37,7 +38,9 @@ import Icon from './Icon'
                 default: ''
             },
             errorWords: {
-                type: String,
+                type: Number,
+                default: 2
+
             }
         },
         // computed:{
@@ -57,9 +60,13 @@ import Icon from './Icon'
         },
         computed:{
             errorMessage(){
-                console.log(this.error);console.log( this.errorWords);
+
+                //console.log(this.error);console.log( this.errorWords);
+                console.log('1');
+                console.log(this.value)
+                console.log(this.value.length >= this.errorWords)
                 if(this.error){
-                    if( this.value.length >= this.errorWords){
+                    if(this.value.length >= this.errorWords){
                         
                         return '';
                     }else{

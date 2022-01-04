@@ -6,7 +6,7 @@
       <l-input disabled value="默认内容"></l-input>
     </div>
     <div class="error">
-      <l-input error="用户名不低于两个字"></l-input>
+      <l-input error="错误信息"></l-input>
     </div>
     <div class="bindDate">
       <l-input v-model="value"></l-input>
