@@ -4,7 +4,7 @@
     <l-button>默认按钮</l-button>
     <l-button icon="settings">左边</l-button>
     <l-button icon="settings" icon-position="right">右边</l-button>
-    <l-button :loading="true">加载中</l-button>
+    <l-button :loading="loading" @click="loading=!loading">加载中</l-button>
     <l-button disabled>默认按钮</l-button>
 </div>
 </template>
@@ -17,9 +17,14 @@ export default {
     components: {
         'l-button': Button,
         
+    },
+    data(){
+        return {loading: true,}
     }
 }
 </script>
 <style >
-
+.g-button{
+    margin: 4px;
+}
 </style>

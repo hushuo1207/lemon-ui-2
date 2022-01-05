@@ -18,7 +18,7 @@ title: Button - 按钮
 <l-button>默认按钮</l-button>
 <l-button icon="settings">左边</l-button>
 <l-button icon="settings" iconPosition="right">右边</l-button>
-<l-button :loading="true">加载中</l-button>
+<l-button :loading="loading" @click="loading=!loading">加载中</l-button> <!-- loading:true -->
 <l-button disabled>默认按钮</l-button>  
 ```
 

@@ -110,7 +110,7 @@ export default {
 | :-------------: |:-------------:| :-----:|:-----:|:-----:|
 | message | 显示内容，函数第一个参数 |    String | --| --|
 | object | 函数接受的第二个参数 |    String | autoClose, closeButton, enableHtml, position| --|
-| position | 设置位置 |    String | top、middle、bottom| middle|
+| position | 设置位置 |    String | top、center、bottom、left、right| middle|
 |autoClose|是否自动关闭|Boolean|true、false|true|
 | closeButton | 设置关闭按钮      |  Object |--| {message:'关闭', callback:undefined}
 |enableHtml|是否支持html内容|Boolean|true、false|false|
