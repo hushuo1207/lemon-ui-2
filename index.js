@@ -36,4 +36,5 @@ export { Button, ButtonGroup, Icon,  Input, Row, Col,
     TabsPane,
     Popover,
     Collapse,
-    CollapseItem };
+    CollapseItem 
+};

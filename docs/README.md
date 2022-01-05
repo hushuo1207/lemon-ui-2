@@ -4,7 +4,7 @@ heroImage: /lemon.png
 heroText: Lemon-UI
 tagline: 一个基于Vue的 UI 组件库
 actionText: 快速上手 →
-actionLink: /start/
+actionLink: /install/
 features:
 - title: 简洁至上
   details: 以简洁易上手为中心思想，以简易的配置帮助你构建项目。

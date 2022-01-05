@@ -5,7 +5,7 @@
 ## 介绍
   这是我在学历 Vue 过程中做的一个 UI 框架， 希望对你有用
 
-## Project setup
+<!-- ## Project setup
 ```
 yarn install
 ```
@@ -32,6 +32,6 @@ yarn run test:unit
 
 
 
-
+ -->
 
 author: 阿星

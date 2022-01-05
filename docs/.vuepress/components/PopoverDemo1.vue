@@ -1,25 +1,25 @@
-<template>
+ class="show"<template>
   <div style="padding-top: 16px;">
 
-    <l-popover trigger="hover">
+    <l-popover class="show" trigger="hover">
       <l-button>上方弹出</l-button>
       <template slot="content">
         弹出内容
       </template>
     </l-popover>
-    <l-popover position="bottom" trigger="hover">
+    <l-popover class="show" position="bottom" trigger="hover">
       <l-button>下方弹出</l-button>
       <template slot="content">
         弹出内容
       </template>
     </l-popover>
-    <l-popover position="left" trigger="hover">
+    <l-popover class="show" position="left" trigger="hover">
       <l-button>左边弹出</l-button>
       <template slot="content">
         弹出内容
       </template>
     </l-popover>
-    <l-popover position="right" trigger="hover">
+    <l-popover class="show" position="right" trigger="hover">
       <l-button>右边弹出</l-button>
       <template slot="content">
         弹出内容
@@ -40,3 +40,8 @@ import Popover from "../../../src/Popover.vue"
         }
     }
 </script>
+<style scoped>
+.show{
+  margin: 4px;
+}
+</style>

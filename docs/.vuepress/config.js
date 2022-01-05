@@ -7,7 +7,7 @@ module.exports = {
     nav: [
       { text: "主页", link: "/" },
       { text: "文档", link: "/start/" },
-      { text: "交流", link: "/https://google.com" },
+      { text: "GitHub", link: "https://github.com/hushuo1207" },
     ],
     displayAllHeaders: true,
     sidebar: [ 
