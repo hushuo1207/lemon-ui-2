@@ -31,11 +31,14 @@ export default {
   }
 }
 ```
-## 具体使用及效果展示
+## 显示：
+**展示**
 
 <ClientOnly>
 <ShowForYou></ShowForYou>
 </ClientOnly>
+
+**具体使用**
 
 ```html
 <l-button>默认按钮</l-button>

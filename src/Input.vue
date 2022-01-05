@@ -1,85 +1,47 @@
 <template>
-    <div class="wrapper" :class="{'error': errorMessage}">
-        <input  :value="value" :disabled="disabled" :readonly="readonly" type="text"
-        @change="$emit('change',$event.target.value)"
-        @input="$emit('input',$event.target.value)"
-        @focus="$emit('focus',$event.target.value)"
-        @blur="$emit('blur',$event.target.value)"
-         />
-        <template v-if="errorMessage">
-            <Icon name = "error" class="icon-error"></Icon>
-            <span class="errorMessage">{{errorMessage}}</span>
-        </template>
-    </div>
+  <div class="wrapper" :class="{error}">
+    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+        :placeholder="placeholder"
+      @change="$emit('change', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
+    >
+    <template v-if="error">
+      <icon name="error" class="icon-error"></icon>
+      <span class="errorMessage">{{error}}</span>
+    </template>
+  </div>
 </template>
 
 <script>
-import Icon from './Icon'
-    export default {
-        name: 'LemonInput',
-        components:{
-            Icon
-        },
-        props:{
-            value: {
-                type: String,
-                default: ''
-            },
-            disabled: {
-                type: Boolean,
-                default: false
-            },
-            readonly: {
-                type: Boolean,
-                default: false
-            },
-            error: {
-                type: String,
-                default: ''
-            },
-            errorWords: {
-                type: Number,
-                default: 2
-
-            }
-        },
-        // computed:{
-        //     valuet(){
-        //         return this.value;
-        //     }
-        // }
-        data(){
-            return{
-                errorMess: {
-                    type: String,
-                    default: ''
-                }
-            }
-        },
-        created(){
-        },
-        computed:{
-            errorMessage(){
-
-                //console.log(this.error);console.log( this.errorWords);
-                console.log('1');
-                console.log(this.value)
-                console.log(this.value.length >= this.errorWords)
-                if(this.error){
-                    if(this.value.length >= this.errorWords){
-                        
-                        return '';
-                    }else{
-                        return this.error;
-                    }
-                }
-                return '';
-            }
-            
-            
-        }
-        
+import Icon from './Icon.vue'
+export default {
+    name: 'LemonInput',
+    components:{
+        Icon
+    },
+    props: {
+      value: {
+        type: String
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      readonly: {
+        type: Boolean,
+        default: false
+      },
+      error: {
+        type: String
+      },
+      placeholder: {
+          type: String,
+      }
     }
+        
+}
 </script>
 
 <style lang="scss" scoped>
@@ -90,40 +52,19 @@ $border-radius: 4px;
 $font-size: 12px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 $red: #f1453d;
-.wrapper{
-    font-size: $font-size;
-    display: inline-flex;
+  .wrapper { font-size: $font-size; display: inline-flex;
     align-items: center;
-    > input {  
-        height: $height;
-        border: 1px solid $border-color;
-        border-radius: $border-radius;
-        padding: 0 8px;
-        font-size: inherit;
-        &:hover {
-            border-color: $border-color-hover;
-            outline: none;
-        }
-        &:focus {
-            border-color: inset 0 1px 3px $box-shadow-color;
-        }
-        &[disabled], &[readonly]{
-            border-color: #bbb;
-            color: #bbb;
-            cursor: not-allowed;
-        }
-
+    > :not(:last-child) {margin-right: .5em; }
+    > input { height: 32px; border: 1px solid $border-color; border-radius: 4px; padding: 0 8px; font-size: inherit;
+      &:hover { border-color: $border-color-hover; }
+      &:focus { box-shadow: inset 0 1px 3px $box-shadow-color; outline: none; }
+      &[disabled], &[readonly] {border-color: #bbb;color: #bbb;cursor: not-allowed; }
     }
-    &.error{
-        >input{
-            border-color: $red;
-        }
+    &.error {
+      > input { border-color: $red; }
     }
-    .icon-error {
-        fill: $red;
-    }
-    .errorMessage {
-        color: $red;
-    }
-}
+    .icon-error { fill: $red; }
+    .errorMessage { color: $red; }
+  }
+</style>
 </style>
