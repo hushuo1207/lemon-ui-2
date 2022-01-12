@@ -28,15 +28,13 @@ title: Toast - 弹出提示框
 代码
 ```js
 import Vue from "vue";
-import Button from '../../../src/Button'
-import Toast from "../../../src/Toast.vue"
-import plugin from '../../../src/plugin.js'
+import {Button, plugin, Toast} from 'lemon-ui-demo'
 
 Vue.use(plugin)
 
 export default {
     components: {
-        'l-button': Button, 'l-toast': Toast
+        'l-button': Button
     }
 }
 ```

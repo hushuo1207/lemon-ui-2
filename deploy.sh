@@ -16,10 +16,10 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 如果发布到 https://<USERNAME>.github.io ,git@github.com:hushuo1207/lemon-ui-2.git
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# 如果发布到 gitee
+git push -f git@gitee.com:axing-website/lemon-ui-2.git master:gh-pages
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# 如果发布到 github.io
 git push -f git@github.com:hushuo1207/lemon-ui-2.git master:gh-pages
 
 cd -
