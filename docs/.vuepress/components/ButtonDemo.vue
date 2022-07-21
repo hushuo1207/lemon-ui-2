@@ -1,6 +1,5 @@
 <template>
 <div >
-    
     <l-button class="show">默认按钮</l-button>
     <l-button class="show" icon="settings">左边</l-button>
     <l-button class="show" icon="settings" icon-position="right">右边</l-button>

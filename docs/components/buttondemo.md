@@ -29,7 +29,7 @@ title: Button - 按钮
 |:--------------:|:-------:|:--------:|:--------------:|:-----------:|
 |   icon         |设置内置的icon|String      | setting，info，left，right，download，loading, down |  --    |
 | iconPositon    | 图标位置   |String   |    left、right |  left       |
-| loading        | 加载状态   |String   |    true、false |  false      |
+| loading        | 加载状态   |Boolean   |    true、false |  false      |
 
 
 
